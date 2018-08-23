@@ -1,31 +1,21 @@
-import java.util.Scanner;
-class prime
+import java.util.Scanner; 
+class Prime {
+public static void main(String args[]){
+int n, count;
+Scanner sc = new Scanner(System.in);
+System.out.print("enter n ");
+n=sc.nextInt();
+System.out.println("all prime numbers till n " + n);
+for (int i = 2; i <= n; i++) {
+count = 2;
+for (int j = 2; j < i; j++) {
+if (i % j == 0)
+count++;
+}
+if (count == 2)
 {
-	public static void main(String args[])
-	{
-		Scanner sc = new Scanner(System.in);
-
-		System.out.println("Enter the number:");
-		int num = sc.nextInt();
-
-		int count=0,i;
-
-		for(i=2;i<=(num/2);i++)
-		{
-			if(num%i==0)
-			{
-				count=1;
-				break;
-			}
-		}
-
-		if(count==0)
-		{
-			System.out.println(num+ " is a prime number.");
-		}
-		else
-		{
-			System.out.println(num+ " is not a prime number.");
-		}
-	}
+System.out.print(i + " ");
+}
+}
+}
 }
